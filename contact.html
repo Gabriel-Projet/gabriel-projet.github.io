@@ -10,19 +10,24 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo-container">
+        <a href="index.html" class="logo-container">
             <img src="img/logo.png" alt="Gabriel Project Logo" class="site-logo">
             <div class="logo-text">Gabriel Project</div>
-        </div>
+        </a>
         <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="index.html#services">Nos Services</a></li>
             <li><a href="index.html#realisations">Réalisations</a></li>
             <li><a href="contact.html" class="active btn-contact">Devis Gratuit</a></li>
         </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
     </nav>
 
- <section class="contact-hero">
+    <section class="contact-hero">
         <div class="container animate-fade-up">
             <h1>Parlons de votre projet.</h1>
             <p>Devis gratuit pour nouvelle construction ou rénovation partout en Belgique.</p>
@@ -32,48 +37,62 @@
 
     <section class="contact-form-section container">
         <div class="form-wrapper animate-scroll">
-<form action="https://formspree.io/f/mblqjljj" method="POST" class="classic-form">
-    <input type="hidden" name="_subject" value="Nouveau contact via le site Gabriel Project">
-    <input type="hidden" name="_language" value="fr">
+            <form action="https://formspree.io/f/mblqjljj" method="POST" class="classic-form">
+                <input type="hidden" name="_subject" value="Nouveau contact via le site Gabriel Project">
+                <input type="hidden" name="_language" value="fr">
 
-    <div class="form-group">
-        <label for="name">Nom complet</label>
-        <input type="text" id="name" name="name" required placeholder="Votre nom">
-    </div>
-    <div class="form-group">
-        <label for="email">Adresse email</label>
-        <input type="email" id="email" name="email" required placeholder="votre@email.com">
-    </div>
-    <div class="form-group">
-        <label for="phone">Téléphone</label>
-        <input type="tel" id="phone" name="phone" placeholder="+32 4..." required>
-    </div>
-    <div class="form-group">
-        <label for="type">Type de projet</label>
-        <select id="type" name="type">
-            <option value="Nouvelle toiture">Nouvelle toiture</option>
-            <option value="Rénovation">Rénovation</option>
-            <option value="Réparation / Fuite">Réparation / Fuite</option>
-            <option value="Autre">Autre</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
-    </div>
-    <button type="submit" class="btn-submit">Envoyer la demande</button>
-</form>            
-
-
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+32 4..." required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type de projet</label>
+                    <select id="type" name="type">
+                        <option value="Nouvelle toiture">Nouvelle toiture</option>
+                        <option value="Rénovation">Rénovation</option>
+                        <option value="Réparation / Fuite">Réparation / Fuite</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer la demande</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <div class="container footer-content">
             <div class="footer-info">
-                <h4>Gabriel Project.</h4>
+                <h4>Gabriel Project</h4>
+                <p style="opacity: 0.7;">Entreprise générale de construction & toiture basée à Asse.</p>
             </div>
             <div class="footer-contact">
+                <h4>Nous contacter</h4>
                 <p>📍 Notstraat 9, 1730 Asse</p>
-                <p>📞 0497 / 33 51 08</p>
+                <p>📞 <a href="https://wa.me/32497335108" target="_blank" rel="noopener noreferrer" class="hover-link">0497 / 33 51 08</a></p>
+                <p>✉️ <a href="mailto:jescugabriel@yahoo.fr" class="hover-link">jescugabriel@yahoo.fr</a></p>
+            </div>
+            <div class="footer-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2515.6091458208254!2d4.20589!3d50.91158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e91107111111%3A0x1111111111111111!2sNotstraat%209%2C%201730%20Asse%2C%20Belgique!5e0!3m2!1sfr!2sbe!4v1600000000000!5m2!1sfr!2sbe"
+                    width="100%"
+                    height="150"
+                    style="border:0; border-radius: 12px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </footer>
