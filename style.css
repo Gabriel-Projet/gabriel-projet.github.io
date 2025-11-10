@@ -522,3 +522,72 @@ footer { background: #1d1d1f; color: #f5f5f7; padding: 80px 0; }
         width: 100%; /* La carte prend toute la largeur sur mobile */
     }
 }
+
+/* --- NOUVEAU : Styles du Menu Mobile --- */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Évite le scroll horizontal quand le menu s'ouvre */
+    }
+    
+    .burger {
+        display: block; /* Affiche le burger sur mobile */
+        z-index: 102;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 100vh;
+        top: 0;
+        background-color: var(--bg-light-gray); /* Fond du menu mobile */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Centre les liens verticalement */
+        width: 100%; /* Prend tout l'écran sur mobile très petit, ou mettre 50% */
+        transform: translateX(100%); /* Caché par défaut vers la droite */
+        transition: transform 0.5s ease-in;
+        z-index: 101;
+        padding-top: 60px; /* Espace pour ne pas coller en haut */
+    }
+
+    .nav-links li {
+        opacity: 0; /* Pour l'animation d'apparition */
+    }
+
+    /* Classe ajoutée par JS quand le menu est ouvert */
+    .nav-active {
+        transform: translateX(0%);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+
+    /* Animation du burger en croix */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2 {
+        opacity: 0;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Animation d'apparition des liens */
+@keyframes navLinkFade {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0px); }
+}
